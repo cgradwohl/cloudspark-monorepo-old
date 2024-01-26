@@ -1,0 +1,24 @@
+{
+  "name": "cloudspark",
+  "workspaces": [
+    "frontend",
+    "hosting-service"
+  ],
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "frontend:dev": "npm run dev --workspace frontend",
+    "frontend:test": "npm run test --workspace frontend",
+    "hosting:test": "npm run test --workspace hosting-service",
+    "hosting:synth": "npm run cdk --workspace hosting-service -- synth",
+    "synth": "npm run cdk --workspaces --if-present -- synth",
+    "test": "npm run test --workspaces --if-present"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "g": "^2.0.1",
+    "ts-node": "^10.9.1"
+  }
+}
